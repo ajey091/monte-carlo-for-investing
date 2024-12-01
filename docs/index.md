@@ -4,6 +4,10 @@ layout: default
 
 # Trading Strategy Dashboard
 
+## Strategy Summary
+
+{{ site.data.signals.summary }}
+
 ## Current Market Signals
 
 {% for symbol in site.data.parameters %}
@@ -37,9 +41,7 @@ layout: default
 
 {% endfor %}
 
-## Strategy Summary
 
-{{ site.data.signals.summary }}
 
 ## Market Overview
 

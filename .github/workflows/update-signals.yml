@@ -1,0 +1,40 @@
+name: Update Trading Signals
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Run daily at midnight
+  workflow_dispatch:      # Allow manual triggers
+
+jobs:
+  update-signals:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+          
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          
+      - name: Run strategy monitor
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          python strategy_monitor.py
+          
+      - name: Update website data
+        run: |
+          cp best_parameters.json docs/_data/parameters.json
+          cp daily_signals/signals_$(date +%Y-%m-%d).json docs/_data/signals.json
+          
+      - name: Commit and push if it changed
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add docs/_data/
+          git commit -m "Update trading signals" || exit 0
+          git push

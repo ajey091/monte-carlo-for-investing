@@ -6,18 +6,20 @@ layout: default
 
 ## Project Overview
 
-This project implements a sophisticated trading strategy optimization system using Monte Carlo simulation techniques. Since 2010, we've been backtesting various technical indicators and their combinations across different ETFs and their leveraged variants to identify optimal trading parameters.
+This project leverages Monte Carlo simulation to optimize trading strategies for ETFs and their leveraged variants. Using market data from 2010 to present, we identify optimal parameters for technical indicators and their combinations.
 
 ### Methodology
-Our system uses Monte Carlo simulation to test thousands of parameter combinations across multiple technical indicators:
-- Moving Averages (short and long-term crossovers)
-- Relative Strength Index (RSI)
-- Volatility Metrics
+The Monte Carlo simulation evaluates parameter combinations across key technical indicators:
 
-Through extensive backtesting from 2010 to present, we've optimized for:
-- Maximum return while managing drawdown risk
-- Effective entry and exit points
-- Special considerations for leveraged ETF decay
+Moving average crossovers for trend identification
+RSI for momentum and reversal signals
+Volatility metrics for risk management
+
+Our optimization framework targets three core objectives:
+
+Return maximization with controlled drawdown exposure
+Precise market entry and exit timing
+Mitigation of leveraged ETF decay effects
 
 ### Strategy Components
 - **Moving Average Crossover**: Uses optimized periods of 47/57 days for trend identification

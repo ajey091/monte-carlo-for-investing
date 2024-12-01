@@ -8,7 +8,7 @@ import os
 from pathlib import Path
 import openai
 from typing import Dict, List, Any
-from monte_carlo_optimizer import MonteCarloOptimizer
+from monte_carlo_optimizer import MonteCarloBacktester
 
 class StrategyMonitor:
     def __init__(self, symbols: List[str], params_file: str = 'best_parameters.json'):
@@ -18,7 +18,7 @@ class StrategyMonitor:
         self.symbols = symbols
         self.params_file = params_file
         self.best_params = self._load_parameters()
-        self.optimizer = MonteCarloOptimizer(symbols, start_date='2010-01-01')
+        self.optimizer = MonteCarloBacktester(symbols, start_date='2010-01-01')
         
     # Add this new method
     def optimize_parameters(self, force: bool = False):
@@ -83,7 +83,7 @@ class StrategyMonitor:
             try:
                 # Fetch recent data
                 ticker = yf.Ticker(symbol)
-                df = ticker.history(period='200d')  # Get enough data for longest MA
+                df = ticker.history(start='2010-01-01', interval='1d')  # Get enough data for longest MA
                 
                 if symbol in self.best_params:
                     params = self.best_params[symbol]
@@ -132,21 +132,29 @@ class StrategyMonitor:
               current_rsi > params['rsi_overbought'] or 
               current_volatility > params['volatility_threshold'] * 1.5):
             signal = "SELL"
+            
+        price_changes = {
+        "1d": close.pct_change(1).iloc[-1] * 100,
+        "1w": close.pct_change(5).iloc[-1] * 100,
+        "1m": close.pct_change(21).iloc[-1] * 100,
+        "ytd": (close.iloc[-1] / close.iloc[0] - 1) * 100
+    	}
         
         return {
-            "date": df.index[-1].strftime('%Y-%m-%d'),
-            "signal": signal,
-            "close_price": close.iloc[-1],
-            "ma_short": current_ma_short,
-            "ma_long": current_ma_long,
-            "rsi": current_rsi,
-            "volatility": current_volatility,
-            "indicators": {
-                "ma_cross": "BULLISH" if current_ma_short > current_ma_long else "BEARISH",
-                "rsi_status": "OVERSOLD" if current_rsi < params['rsi_oversold'] else 
-                             "OVERBOUGHT" if current_rsi > params['rsi_overbought'] else "NEUTRAL",
-                "volatility_status": "HIGH" if current_volatility > params['volatility_threshold'] else "LOW"
-            }
+			"date": df.index[-1].strftime('%Y-%m-%d'),
+			"signal": signal,
+			"close_price": close.iloc[-1],
+			"price_changes": price_changes,
+			"ma_short": current_ma_short,
+			"ma_long": current_ma_long,
+			"rsi": current_rsi,
+			"volatility": current_volatility,
+			"indicators": {
+				"ma_cross": "BULLISH" if current_ma_short > current_ma_long else "BEARISH",
+				"rsi_status": "OVERSOLD" if current_rsi < params['rsi_oversold'] else 
+							"OVERBOUGHT" if current_rsi > params['rsi_overbought'] else "NEUTRAL",
+				"volatility_status": "HIGH" if current_volatility > params['volatility_threshold'] else "LOW"
+			}
         }
 
     def generate_summary(self, signals: Dict[str, Dict], api_key: str) -> str:

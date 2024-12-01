@@ -1,0 +1,146 @@
+{
+    "date": "2024-12-01",
+    "signals": {
+        "VOO": {
+            "date": "2024-11-29",
+            "signal": "HOLD",
+            "close_price": 553.4500122070312,
+            "price_changes": {
+                "1d": 0.5267504274567347,
+                "1w": 1.4313461895982593,
+                "1m": 3.805619342133104,
+                "ytd": 609.8235319155807
+            },
+            "ma_short": 535.8848604242852,
+            "ma_long": 532.6635854620682,
+            "rsi": 59.686938934792785,
+            "volatility": 0.007919148932903882,
+            "indicators": {
+                "ma_cross": "BULLISH",
+                "rsi_status": "NEUTRAL",
+                "volatility_status": "LOW"
+            }
+        },
+        "SSO": {
+            "date": "2024-11-29",
+            "signal": "HOLD",
+            "close_price": 98.06999969482422,
+            "price_changes": {
+                "1d": 1.176105835199892,
+                "1w": 2.820300397219655,
+                "1m": 7.145199391182144,
+                "ytd": 2037.3974859758675
+            },
+            "ma_short": 92.49999967534491,
+            "ma_long": 91.53311665852864,
+            "rsi": 58.56892804749025,
+            "volatility": 0.015878651347864814,
+            "indicators": {
+                "ma_cross": "BULLISH",
+                "rsi_status": "NEUTRAL",
+                "volatility_status": "LOW"
+            }
+        },
+        "UPRO": {
+            "date": "2024-11-29",
+            "signal": "HOLD",
+            "close_price": 97.05000305175781,
+            "price_changes": {
+                "1d": 1.7402281924005614,
+                "1w": 4.164435933310728,
+                "1m": 10.409557869216911,
+                "ytd": 4524.837681925425
+            },
+            "ma_short": 89.27680855609,
+            "ma_long": 87.96048629493045,
+            "rsi": 58.1126704170822,
+            "volatility": 0.023884425308085176,
+            "indicators": {
+                "ma_cross": "BULLISH",
+                "rsi_status": "NEUTRAL",
+                "volatility_status": "LOW"
+            }
+        },
+        "QQQ": {
+            "date": "2024-11-29",
+            "signal": "HOLD",
+            "close_price": 509.739990234375,
+            "price_changes": {
+                "1d": 0.8786864335380562,
+                "1w": 0.9426074586100341,
+                "1m": 2.691483383726667,
+                "ytd": 1155.159221956021
+            },
+            "ma_short": 496.4344677214927,
+            "ma_long": 492.9236123603687,
+            "rsi": 56.96179248761362,
+            "volatility": 0.010902656069549968,
+            "indicators": {
+                "ma_cross": "BULLISH",
+                "rsi_status": "NEUTRAL",
+                "volatility_status": "LOW"
+            }
+        },
+        "QLD": {
+            "date": "2024-11-29",
+            "signal": "HOLD",
+            "close_price": 108.20999908447266,
+            "price_changes": {
+                "1d": 1.6533604384096012,
+                "1w": 1.6533604384096012,
+                "1m": 4.550723753113672,
+                "ytd": 5683.103953909032
+            },
+            "ma_short": 103.53638214760639,
+            "ma_long": 102.2541732788086,
+            "rsi": 55.79710096367611,
+            "volatility": 0.02182882856754148,
+            "indicators": {
+                "ma_cross": "BULLISH",
+                "rsi_status": "NEUTRAL",
+                "volatility_status": "LOW"
+            }
+        },
+        "TQQQ": {
+            "date": "2024-11-29",
+            "signal": "HOLD",
+            "close_price": 79.88999938964844,
+            "price_changes": {
+                "1d": 2.5545543322081254,
+                "1w": 2.4756289479743954,
+                "1m": 6.279102481943499,
+                "ytd": 19030.775382502954
+            },
+            "ma_short": 75.18851032662899,
+            "ma_long": 73.8885477969521,
+            "rsi": 55.31483948463061,
+            "volatility": 0.03263496642443403,
+            "indicators": {
+                "ma_cross": "BULLISH",
+                "rsi_status": "NEUTRAL",
+                "volatility_status": "LOW"
+            }
+        },
+        "SOXL": {
+            "date": "2024-11-29",
+            "signal": "HOLD",
+            "close_price": 28.059999465942383,
+            "price_changes": {
+                "1d": 4.002964944515108,
+                "1w": -1.5093025925949521,
+                "1m": -17.494851953061165,
+                "ytd": 4526.384034886121
+            },
+            "ma_short": 33.42595729422062,
+            "ma_long": 33.35223264861525,
+            "rsi": 40.44020047442451,
+            "volatility": 0.05276683201976845,
+            "indicators": {
+                "ma_cross": "BULLISH",
+                "rsi_status": "NEUTRAL",
+                "volatility_status": "LOW"
+            }
+        }
+    },
+    "summary": "Error generating summary: \n\nYou tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.\n\nYou can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. \n\nAlternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`\n\nA detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742\n"
+}

@@ -4,6 +4,34 @@ layout: default
 
 # Trading Strategy Dashboard
 
+## Project Overview
+
+This project implements a sophisticated trading strategy optimization system using Monte Carlo simulation techniques. Since 2010, we've been backtesting various technical indicators and their combinations across different ETFs and their leveraged variants to identify optimal trading parameters.
+
+### Methodology
+Our system uses Monte Carlo simulation to test thousands of parameter combinations across multiple technical indicators:
+- Moving Averages (short and long-term crossovers)
+- Relative Strength Index (RSI)
+- Volatility Metrics
+
+Through extensive backtesting from 2010 to present, we've optimized for:
+- Maximum return while managing drawdown risk
+- Effective entry and exit points
+- Special considerations for leveraged ETF decay
+
+### Strategy Components
+- **Moving Average Crossover**: Uses optimized periods of 47/57 days for trend identification
+- **RSI Boundaries**: Asymmetric bounds (38/77) for better risk management
+- **Volatility Filters**: Adaptive thresholds to protect against market turbulence
+- **Daily Monitoring**: Continuous signal generation and parameter optimization
+
+### Implementation
+- Weekly parameter optimization through Monte Carlo simulation
+- Daily signal generation and market analysis
+- Special risk management for leveraged instruments (2x and 3x ETFs)
+- Automated monitoring and signal generation
+
+
 ## Strategy Summary
 
 {{ site.data.signals.summary }}
@@ -16,6 +44,11 @@ layout: default
 {% assign signal_data = site.data.signals.signals[ticker] %}
 
 ### {{ ticker }} Analysis
+
+#### Charts
+![Price and Moving Averages](data:image/png;base64,{{ signal_data.plots.price_ma }})
+![RSI](data:image/png;base64,{{ signal_data.plots.rsi }})
+![Volatility](data:image/png;base64,{{ signal_data.plots.volatility }})
 
 #### Current Status
 - **Signal**: {{ signal_data.signal }}

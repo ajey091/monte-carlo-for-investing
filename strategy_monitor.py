@@ -11,6 +11,9 @@ from typing import Dict, List, Any
 from monte_carlo_optimizer import MonteCarloBacktester
 from dotenv import load_dotenv
 load_dotenv()
+import matplotlib.pyplot as plt
+import base64
+from io import BytesIO
 
 class StrategyMonitor:
     def __init__(self, symbols: List[str], params_file: str = 'best_parameters.json'):
@@ -85,11 +88,11 @@ class StrategyMonitor:
             try:
                 # Fetch recent data
                 ticker = yf.Ticker(symbol)
-                df = ticker.history(start='2010-01-01', interval='1d')  # Get enough data for longest MA
+                df = ticker.history(period='200d')  # Get enough data for longest MA
                 
                 if symbol in self.best_params:
                     params = self.best_params[symbol]
-                    signal = self._calculate_signal(df, params)
+                    signal = self._calculate_signal(symbol, df, params)  # Pass symbol here
                     signals[symbol] = signal
             except Exception as e:
                 print(f"Error processing {symbol}: {str(e)}")
@@ -97,7 +100,7 @@ class StrategyMonitor:
         
         return signals
 
-    def _calculate_signal(self, df: pd.DataFrame, params: Dict) -> Dict:
+    def _calculate_signal(self, symbol: str, df: pd.DataFrame, params: Dict) -> Dict:
         """
         Calculate trading signals based on stored parameters
         """
@@ -124,6 +127,10 @@ class StrategyMonitor:
         current_rsi = rsi.iloc[-1]
         current_volatility = volatility.iloc[-1]
         
+        # Save indicators to dataframe for plotting
+        df['RSI'] = rsi
+        df['Volatility'] = volatility
+        
         # Determine signal
         signal = "HOLD"
         if (current_ma_short > current_ma_long and 
@@ -131,33 +138,85 @@ class StrategyMonitor:
             current_volatility < params['volatility_threshold']):
             signal = "BUY"
         elif (current_ma_short < current_ma_long or 
-              current_rsi > params['rsi_overbought'] or 
-              current_volatility > params['volatility_threshold'] * 1.5):
+            current_rsi > params['rsi_overbought'] or 
+            current_volatility > params['volatility_threshold'] * 1.5):
             signal = "SELL"
-            
-        price_changes = {
-        "1d": close.pct_change(1).iloc[-1] * 100,
-        "1w": close.pct_change(5).iloc[-1] * 100,
-        "1m": close.pct_change(21).iloc[-1] * 100,
-        "ytd": (close.iloc[-1] / close.iloc[0] - 1) * 100
-    	}
+        
+        # Generate plots
+        plots = self._generate_plots(symbol, df, params)
         
         return {
-			"date": df.index[-1].strftime('%Y-%m-%d'),
-			"signal": signal,
-			"close_price": close.iloc[-1],
-			"price_changes": price_changes,
-			"ma_short": current_ma_short,
-			"ma_long": current_ma_long,
-			"rsi": current_rsi,
-			"volatility": current_volatility,
-			"indicators": {
-				"ma_cross": "BULLISH" if current_ma_short > current_ma_long else "BEARISH",
-				"rsi_status": "OVERSOLD" if current_rsi < params['rsi_oversold'] else 
-							"OVERBOUGHT" if current_rsi > params['rsi_overbought'] else "NEUTRAL",
-				"volatility_status": "HIGH" if current_volatility > params['volatility_threshold'] else "LOW"
-			}
+            "date": df.index[-1].strftime('%Y-%m-%d'),
+            "signal": signal,
+            "close_price": close.iloc[-1],
+            "ma_short": current_ma_short,
+            "ma_long": current_ma_long,
+            "rsi": current_rsi,
+            "volatility": current_volatility,
+            "indicators": {
+                "ma_cross": "BULLISH" if current_ma_short > current_ma_long else "BEARISH",
+                "rsi_status": "OVERSOLD" if current_rsi < params['rsi_oversold'] else 
+                            "OVERBOUGHT" if current_rsi > params['rsi_overbought'] else "NEUTRAL",
+                "volatility_status": "HIGH" if current_volatility > params['volatility_threshold'] else "LOW"
+            },
+            "plots": plots
         }
+    
+    def _generate_plots(self, symbol: str, df: pd.DataFrame, params: Dict) -> Dict[str, str]:
+        """
+        Generate plots for price/MA, RSI, and volatility
+        Returns base64 encoded strings of the plots
+        """
+        plots = {}
+        
+        # Price and MA plot
+        plt.figure(figsize=(12, 6))
+        plt.plot(df.index, df['Close'], label='Price', alpha=0.7)
+        plt.plot(df.index, df['Close'].rolling(window=params['ma_short']).mean(), 
+                label=f'{params["ma_short"]}d MA', alpha=0.8)
+        plt.plot(df.index, df['Close'].rolling(window=params['ma_long']).mean(), 
+                label=f'{params["ma_long"]}d MA', alpha=0.8)
+        plt.title(f'{symbol} Price and Moving Averages')
+        plt.legend()
+        plt.grid(True)
+        
+        # Convert to base64
+        buffer = BytesIO()
+        plt.savefig(buffer, format='png')
+        buffer.seek(0)
+        plots['price_ma'] = base64.b64encode(buffer.getvalue()).decode()
+        plt.close()
+        
+        # RSI plot
+        plt.figure(figsize=(12, 4))
+        plt.plot(df.index, df['RSI'], label='RSI', color='blue')
+        plt.axhline(y=params['rsi_oversold'], color='green', linestyle='--', label='Oversold')
+        plt.axhline(y=params['rsi_overbought'], color='red', linestyle='--', label='Overbought')
+        plt.title(f'{symbol} RSI')
+        plt.legend()
+        plt.grid(True)
+        
+        buffer = BytesIO()
+        plt.savefig(buffer, format='png')
+        buffer.seek(0)
+        plots['rsi'] = base64.b64encode(buffer.getvalue()).decode()
+        plt.close()
+        
+        # Volatility plot
+        plt.figure(figsize=(12, 4))
+        plt.plot(df.index, df['Volatility'], label='Volatility', color='purple')
+        plt.axhline(y=params['volatility_threshold'], color='red', linestyle='--', label='Threshold')
+        plt.title(f'{symbol} Volatility')
+        plt.legend()
+        plt.grid(True)
+        
+        buffer = BytesIO()
+        plt.savefig(buffer, format='png')
+        buffer.seek(0)
+        plots['volatility'] = base64.b64encode(buffer.getvalue()).decode()
+        plt.close()
+        
+        return plots
 
     def generate_summary(self, signals: Dict[str, Dict], api_key: str) -> str:
         """

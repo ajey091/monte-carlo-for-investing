@@ -12,7 +12,6 @@ from monte_carlo_optimizer import MonteCarloBacktester
 from dotenv import load_dotenv
 load_dotenv()
 import matplotlib.pyplot as plt
-import base64
 from io import BytesIO
 
 class StrategyMonitor:
@@ -167,7 +166,8 @@ class StrategyMonitor:
         Generate plots for price/MA, RSI, and volatility
         Returns base64 encoded strings of the plots
         """
-        plots = {}
+        plots_dir = Path('docs/assets/images')
+        plots_dir.mkdir(exist_ok=True, parents=True)
         
         # Price and MA plot
         plt.figure(figsize=(12, 6))
@@ -179,12 +179,7 @@ class StrategyMonitor:
         plt.title(f'{symbol} Price and Moving Averages')
         plt.legend()
         plt.grid(True)
-        
-        # Convert to base64
-        buffer = BytesIO()
-        plt.savefig(buffer, format='png')
-        buffer.seek(0)
-        plots['price_ma'] = base64.b64encode(buffer.getvalue()).decode()
+        plt.savefig(plots_dir / f'{symbol}_price_ma.png')
         plt.close()
         
         # RSI plot
@@ -195,28 +190,20 @@ class StrategyMonitor:
         plt.title(f'{symbol} RSI')
         plt.legend()
         plt.grid(True)
-        
-        buffer = BytesIO()
-        plt.savefig(buffer, format='png')
-        buffer.seek(0)
-        plots['rsi'] = base64.b64encode(buffer.getvalue()).decode()
+        plt.savefig(plots_dir / f'{symbol}_price_rsi.png')
         plt.close()
         
         # Volatility plot
         plt.figure(figsize=(12, 4))
         plt.plot(df.index, df['Volatility'], label='Volatility', color='purple')
-        plt.axhline(y=params['volatility_threshold'], color='red', linestyle='--', label='Threshold')
+        # plt.axhline(y=params['volatility_threshold'], color='red', linestyle='--', label='Threshold')
         plt.title(f'{symbol} Volatility')
         plt.legend()
         plt.grid(True)
-        
-        buffer = BytesIO()
-        plt.savefig(buffer, format='png')
-        buffer.seek(0)
-        plots['volatility'] = base64.b64encode(buffer.getvalue()).decode()
+        plt.savefig(plots_dir / f'{symbol}_price_vol.png')
         plt.close()
         
-        return plots
+        return
 
     def generate_summary(self, signals: Dict[str, Dict], api_key: str) -> str:
         """

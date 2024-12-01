@@ -46,9 +46,9 @@ Through extensive backtesting from 2010 to present, we've optimized for:
 ### {{ ticker }} Analysis
 
 #### Charts
-![Price and Moving Averages](/assets/images/{{ ticker }}_price_ma.png)
-![RSI](/assets/images/{{ ticker }}_price_rsi.png)
-![Volatility](/assets/images/{{ ticker }}_price_vol.png)
+![Price and Moving Averages](./assets/images/{{ ticker }}_price_ma.png)
+![RSI](./assets/images/{{ ticker }}_price_rsi.png)
+![Volatility](./assets/images/{{ ticker }}_price_vol.png)
 
 #### Current Status
 - **Signal**: {{ signal_data.signal }}

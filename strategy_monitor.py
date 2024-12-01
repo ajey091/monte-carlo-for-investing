@@ -88,7 +88,7 @@ class StrategyMonitor:
             try:
                 # Fetch recent data
                 ticker = yf.Ticker(symbol)
-                df = ticker.history(period='200d')  # Get enough data for longest MA
+                df = ticker.history(start='2010-01-01', interval='1d')  
                 
                 if symbol in self.best_params:
                     params = self.best_params[symbol]

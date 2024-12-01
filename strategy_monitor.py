@@ -6,7 +6,7 @@ from datetime import datetime, timedelta
 import json
 import os
 from pathlib import Path
-import openai
+from openai import OpenAI
 from typing import Dict, List, Any
 from monte_carlo_optimizer import MonteCarloBacktester
 
@@ -161,7 +161,7 @@ class StrategyMonitor:
         """
         Generate a summary of current signals using OpenAI
         """
-        openai.api_key = api_key
+        client = OpenAI(api_key=api_key)
         
         # Prepare the prompt
         prompt = f"""
@@ -179,14 +179,20 @@ class StrategyMonitor:
         """
         
         try:
-            response = openai.ChatCompletion.create(
-                model="gpt-4o",
+            chat_completion = client.chat.completions.create(
                 messages=[
-                    {"role": "system", "content": "You are a professional trading analyst focusing on ETFs and leveraged ETFs."},
-                    {"role": "user", "content": prompt}
-                ]
+                    {
+                        "role": "system",
+                        "content": "You are a professional trading analyst focusing on ETFs and leveraged ETFs."
+                    },
+                    {
+                        "role": "user",
+                        "content": prompt
+                    }
+                ],
+                model="gpt-4o-mini",  # or whichever model you prefer
             )
-            return response.choices[0].message.content
+            return chat_completion.choices[0].message.content
         except Exception as e:
             return f"Error generating summary: {str(e)}"
 

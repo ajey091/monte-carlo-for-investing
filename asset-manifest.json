@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/monte-carlo-for-investing/static/css/main.51a94adf.css",
+    "main.js": "/monte-carlo-for-investing/static/js/main.fdb1d658.js",
+    "static/js/453.769262cc.chunk.js": "/monte-carlo-for-investing/static/js/453.769262cc.chunk.js",
+    "static/media/TradingDashboard": "/monte-carlo-for-investing/static/media/TradingDashboard.7f7aad373ece7e8e1234",
+    "index.html": "/monte-carlo-for-investing/index.html",
+    "main.51a94adf.css.map": "/monte-carlo-for-investing/static/css/main.51a94adf.css.map",
+    "main.fdb1d658.js.map": "/monte-carlo-for-investing/static/js/main.fdb1d658.js.map",
+    "453.769262cc.chunk.js.map": "/monte-carlo-for-investing/static/js/453.769262cc.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.51a94adf.css",
+    "static/js/main.fdb1d658.js"
+  ]
+}

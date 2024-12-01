@@ -9,6 +9,8 @@ from pathlib import Path
 from openai import OpenAI
 from typing import Dict, List, Any
 from monte_carlo_optimizer import MonteCarloBacktester
+from dotenv import load_dotenv
+load_dotenv()
 
 class StrategyMonitor:
     def __init__(self, symbols: List[str], params_file: str = 'best_parameters.json'):
@@ -162,6 +164,7 @@ class StrategyMonitor:
         Generate a summary of current signals using OpenAI
         """
         client = OpenAI(api_key=api_key)
+        # client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
         
         # Prepare the prompt
         prompt = f"""

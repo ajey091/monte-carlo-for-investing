@@ -1,0 +1,65 @@
+{
+	"VOO": {
+		"ma_short": 47,
+		"ma_long": 57,
+		"rsi_period": 29,
+		"rsi_oversold": 38,
+		"rsi_overbought": 77,
+		"volatility_window": 28,
+		"volatility_threshold": 1.009685940134778
+	},
+	"SSO": {
+		"ma_short": 47,
+		"ma_long": 57,
+		"rsi_period": 29,
+		"rsi_oversold": 38,
+		"rsi_overbought": 77,
+		"volatility_window": 28,
+		"volatility_threshold": 1.009685940134778
+	},
+	"UPRO": {
+		"ma_short": 47,
+		"ma_long": 57,
+		"rsi_period": 29,
+		"rsi_oversold": 38,
+		"rsi_overbought": 77,
+		"volatility_window": 28,
+		"volatility_threshold": 1.009685940134778
+	},
+	"QQQ": {
+		"ma_short": 47,
+		"ma_long": 57,
+		"rsi_period": 29,
+		"rsi_oversold": 38,
+		"rsi_overbought": 77,
+		"volatility_window": 28,
+		"volatility_threshold": 1.009685940134778
+	},
+	"QLD": {
+		"ma_short": 47,
+		"ma_long": 57,
+		"rsi_period": 29,
+		"rsi_oversold": 38,
+		"rsi_overbought": 77,
+		"volatility_window": 28,
+		"volatility_threshold": 1.009685940134778
+	},
+	"TQQQ": {
+		"ma_short": 47,
+		"ma_long": 57,
+		"rsi_period": 29,
+		"rsi_oversold": 38,
+		"rsi_overbought": 77,
+		"volatility_window": 28,
+		"volatility_threshold": 1.009685940134778
+	},
+	"SOXL": {
+		"ma_short": 47,
+		"ma_long": 57,
+		"rsi_period": 29,
+		"rsi_oversold": 38,
+		"rsi_overbought": 77,
+		"volatility_window": 28,
+		"volatility_threshold": 1.009685940134778
+	}
+}

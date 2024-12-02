@@ -2,8 +2,8 @@ name: Daily Trading Signals
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # Runs at 00:00 UTC daily
-  workflow_dispatch:  # Allows manual trigger
+    - cron: '0 0 * * *'
+  workflow_dispatch:
 
 jobs:
   generate-signals:
@@ -12,8 +12,15 @@ jobs:
     steps:
     - uses: actions/checkout@v4
       with:
-        ref: gh-pages-v2  # Explicitly checkout gh-pages-v2 branch
-        token: ${{ secrets.GITHUB_TOKEN }}  # Add token for authentication
+        ref: gh-pages-v2
+        token: ${{ secrets.GITHUB_TOKEN }}
+        fetch-depth: 0
+    
+    - name: Verify branch and status
+      run: |
+        git status
+        git branch --show-current
+        git rev-parse HEAD
     
     - name: Set up Python
       uses: actions/setup-python@v2
@@ -31,12 +38,12 @@ jobs:
       run: |
         python strategy_monitor.py
         
-    - name: Commit and push if changes
+    - name: Push changes
       run: |
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
         git add daily_signals/*
         git commit -m "Update daily trading signals" || exit 0
-        git push origin gh-pages-v2
+        git push origin HEAD:gh-pages-v2
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

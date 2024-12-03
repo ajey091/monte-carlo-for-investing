@@ -35,8 +35,6 @@ jobs:
       run: |
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
-        git fetch origin gh-pages-v2  # Fetch the latest changes from the remote branch
-        git rebase origin/gh-pages-v2  # Rebase your changes on top of the latest remote branch
         git add daily_signals/*
         git commit -m "Update daily trading signals" || exit 0
         git push origin HEAD:gh-pages-v2

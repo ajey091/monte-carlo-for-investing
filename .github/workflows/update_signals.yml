@@ -43,6 +43,12 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           
+          # Add and commit changes
+          echo "Adding and committing changes..."
+          git add daily_signals/* docs/_data/*
+          git status  # Let's see what's actually being committed
+          git commit -m "Update trading signals" || echo "No changes to commit"
+          
           # Push with force if needed, but with lease for safety
           echo "Pushing changes..."
-          git push --force-with-lease origin main
+          git push --force-with-lease origin gh-pages-v2

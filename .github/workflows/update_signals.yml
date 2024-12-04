@@ -11,10 +11,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: main  # or whatever branch you want to use
-          token: ${{ secrets.GITHUB_TOKEN }}  # Use this instead of ssh-key
+          ref: main  # or your target branch
+          token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 0
-          
+
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
@@ -37,24 +37,12 @@ jobs:
           cp daily_signals/signals_$(date +%Y-%m-%d).json docs/_data/signals.json
       
       - name: Push changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           
-          # Fetch latest changes
-          echo "Fetching latest changes..."
-          git fetch origin gh-pages-v2
-          
-          # Pull with rebase
-          echo "Pulling with rebase..."
-          git pull origin gh-pages-v2 --rebase
-          
-          # Add and commit changes
-          echo "Adding and committing changes..."
-          git add daily_signals/* docs/_data/*
-          git status  # Let's see what's actually being committed
-          git commit -m "Update trading signals" || echo "No changes to commit"
-          
           # Push with force if needed, but with lease for safety
           echo "Pushing changes..."
-          git push --force-with-lease origin gh-pages-v2
+          git push --force-with-lease origin main

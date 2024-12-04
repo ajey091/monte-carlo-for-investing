@@ -2,8 +2,8 @@ name: Trading Signals Update
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # Run daily at midnight
-  workflow_dispatch:      # Allow manual triggers
+    - cron: '0 0 * * *'
+  workflow_dispatch:
 
 jobs:
   update-signals:
@@ -11,10 +11,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: gh-pages-v2
-          ssh-key: ${{ secrets.DEPLOY_KEY }}
+          ref: main  # or whatever branch you want to use
+          token: ${{ secrets.GITHUB_TOKEN }}  # Use this instead of ssh-key
           fetch-depth: 0
-      
+          
       - name: Set up Python
         uses: actions/setup-python@v2
         with:

@@ -10,33 +10,34 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - uses: actions/checkout@v4
-      with:
-        ref: gh-pages-v2
-        ssh-key: ${{ secrets.DEPLOY_KEY }}  # Use SSH deploy key instead of GITHUB_TOKEN
-        
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.9'
-    
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
-        
-    - name: Generate trading signals
-      env:
-        OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-      run: |
-        python strategy_monitor.py
-        
-    - name: Push changes
-      run: |
-        git config --local user.email "github-actions[bot]@users.noreply.github.com"
-        git config --local user.name "github-actions[bot]"
-        git fetch origin gh-pages-v2  # Fetch the latest changes from the remote branch
-        git rebase origin/gh-pages-v2  # Rebase your changes on top of the latest remote branch
-        git add daily_signals/*
-        git commit -m "Update daily trading signals" || exit 0
-        git push origin HEAD:gh-pages-v2
+      - uses: actions/checkout@v4
+        with:
+          ref: gh-pages-v2
+          ssh-key: ${{ secrets.DEPLOY_KEY }}
+          fetch-depth: 0
+      
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      
+      - name: Generate trading signals
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          python strategy_monitor.py
+      
+      - name: Push changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git fetch origin gh-pages-v2
+          git rebase origin/gh-pages-v2
+          git add daily_signals/*
+          git commit -m "Update daily trading signals" || exit 0
+          git push origin HEAD:gh-pages-v2

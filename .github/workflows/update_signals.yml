@@ -34,6 +34,7 @@ jobs:
       - name: Update website data
         run: |
           cp best_parameters.json docs/_data/parameters.json
+          ls daily_signals/ 
           cp daily_signals/signals_$(date +%Y-%m-%d).json docs/_data/signals.json
       
       - name: Push changes

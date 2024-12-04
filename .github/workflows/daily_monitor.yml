@@ -32,12 +32,25 @@ jobs:
         run: |
           python strategy_monitor.py
       
-      - name: Push changes
-        run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git fetch origin gh-pages-v2
-          git rebase origin/gh-pages-v2
-          git add daily_signals/*
-          git commit -m "Update daily trading signals" || exit 0
-          git push origin HEAD:gh-pages-v2
+          - name: Push changes
+          run: |
+            git config --local user.email "github-actions[bot]@users.noreply.github.com"
+            git config --local user.name "github-actions[bot]"
+            
+            # Fetch latest changes
+            echo "Fetching latest changes..."
+            git fetch origin gh-pages-v2
+            
+            # Pull with rebase
+            echo "Pulling with rebase..."
+            git pull origin gh-pages-v2 --rebase
+            
+            # Add and commit changes
+            echo "Adding and committing changes..."
+            git add daily_signals/*
+            git status  # Let's see what's actually being committed
+            git commit -m "Update daily trading signals" || echo "No changes to commit"
+            
+            # Push with force if needed, but with lease for safety
+            echo "Pushing changes..."
+            git push --force-with-lease origin gh-pages-v2

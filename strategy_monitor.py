@@ -6,9 +6,13 @@ from datetime import datetime, timedelta
 import json
 import os
 from pathlib import Path
-import openai
+from openai import OpenAI
 from typing import Dict, List, Any
-from monte_carlo_optimizer import MonteCarloOptimizer
+from monte_carlo_optimizer import MonteCarloBacktester
+from dotenv import load_dotenv
+load_dotenv()
+import matplotlib.pyplot as plt
+from io import BytesIO
 
 class StrategyMonitor:
     def __init__(self, symbols: List[str], params_file: str = 'best_parameters.json'):
@@ -18,7 +22,7 @@ class StrategyMonitor:
         self.symbols = symbols
         self.params_file = params_file
         self.best_params = self._load_parameters()
-        self.optimizer = MonteCarloOptimizer(symbols, start_date='2010-01-01')
+        self.optimizer = MonteCarloBacktester(symbols, start_date='2010-01-01')
         
     # Add this new method
     def optimize_parameters(self, force: bool = False):
@@ -83,11 +87,11 @@ class StrategyMonitor:
             try:
                 # Fetch recent data
                 ticker = yf.Ticker(symbol)
-                df = ticker.history(period='200d')  # Get enough data for longest MA
+                df = ticker.history(start='2010-01-01', interval='1d')  
                 
                 if symbol in self.best_params:
                     params = self.best_params[symbol]
-                    signal = self._calculate_signal(df, params)
+                    signal = self._calculate_signal(symbol, df, params)  # Pass symbol here
                     signals[symbol] = signal
             except Exception as e:
                 print(f"Error processing {symbol}: {str(e)}")
@@ -95,7 +99,7 @@ class StrategyMonitor:
         
         return signals
 
-    def _calculate_signal(self, df: pd.DataFrame, params: Dict) -> Dict:
+    def _calculate_signal(self, symbol: str, df: pd.DataFrame, params: Dict) -> Dict:
         """
         Calculate trading signals based on stored parameters
         """
@@ -122,6 +126,10 @@ class StrategyMonitor:
         current_rsi = rsi.iloc[-1]
         current_volatility = volatility.iloc[-1]
         
+        # Save indicators to dataframe for plotting
+        df['RSI'] = rsi
+        df['Volatility'] = volatility
+        
         # Determine signal
         signal = "HOLD"
         if (current_ma_short > current_ma_long and 
@@ -129,9 +137,12 @@ class StrategyMonitor:
             current_volatility < params['volatility_threshold']):
             signal = "BUY"
         elif (current_ma_short < current_ma_long or 
-              current_rsi > params['rsi_overbought'] or 
-              current_volatility > params['volatility_threshold'] * 1.5):
+            current_rsi > params['rsi_overbought'] or 
+            current_volatility > params['volatility_threshold'] * 1.5):
             signal = "SELL"
+        
+        # Generate plots
+        plots = self._generate_plots(symbol, df, params)
         
         return {
             "date": df.index[-1].strftime('%Y-%m-%d'),
@@ -144,16 +155,62 @@ class StrategyMonitor:
             "indicators": {
                 "ma_cross": "BULLISH" if current_ma_short > current_ma_long else "BEARISH",
                 "rsi_status": "OVERSOLD" if current_rsi < params['rsi_oversold'] else 
-                             "OVERBOUGHT" if current_rsi > params['rsi_overbought'] else "NEUTRAL",
+                            "OVERBOUGHT" if current_rsi > params['rsi_overbought'] else "NEUTRAL",
                 "volatility_status": "HIGH" if current_volatility > params['volatility_threshold'] else "LOW"
-            }
+            },
+            "plots": plots
         }
+    
+    def _generate_plots(self, symbol: str, df: pd.DataFrame, params: Dict) -> Dict[str, str]:
+        """
+        Generate plots for price/MA, RSI, and volatility
+        Returns base64 encoded strings of the plots
+        """
+        plots_dir = Path('docs/assets/images')
+        plots_dir.mkdir(exist_ok=True, parents=True)
+        
+        # Price and MA plot
+        plt.figure(figsize=(12, 6))
+        plt.plot(df.index, df['Close'], label='Price', alpha=0.7)
+        plt.plot(df.index, df['Close'].rolling(window=params['ma_short']).mean(), 
+                label=f'{params["ma_short"]}d MA', alpha=0.8)
+        plt.plot(df.index, df['Close'].rolling(window=params['ma_long']).mean(), 
+                label=f'{params["ma_long"]}d MA', alpha=0.8)
+        plt.title(f'{symbol} Price and Moving Averages')
+        plt.legend()
+        plt.grid(True)
+        plt.savefig(plots_dir / f'{symbol}_price_ma.png')
+        plt.close()
+        
+        # RSI plot
+        plt.figure(figsize=(12, 4))
+        plt.plot(df.index, df['RSI'], label='RSI', color='blue')
+        plt.axhline(y=params['rsi_oversold'], color='green', linestyle='--', label='Oversold')
+        plt.axhline(y=params['rsi_overbought'], color='red', linestyle='--', label='Overbought')
+        plt.title(f'{symbol} RSI')
+        plt.legend()
+        plt.grid(True)
+        plt.savefig(plots_dir / f'{symbol}_price_rsi.png')
+        plt.close()
+        
+        # Volatility plot
+        plt.figure(figsize=(12, 4))
+        plt.plot(df.index, df['Volatility'], label='Volatility', color='purple')
+        # plt.axhline(y=params['volatility_threshold'], color='red', linestyle='--', label='Threshold')
+        plt.title(f'{symbol} Volatility')
+        plt.legend()
+        plt.grid(True)
+        plt.savefig(plots_dir / f'{symbol}_price_vol.png')
+        plt.close()
+        
+        return
 
     def generate_summary(self, signals: Dict[str, Dict], api_key: str) -> str:
         """
         Generate a summary of current signals using OpenAI
         """
-        openai.api_key = api_key
+        client = OpenAI(api_key=api_key)
+        # client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
         
         # Prepare the prompt
         prompt = f"""
@@ -171,14 +228,20 @@ class StrategyMonitor:
         """
         
         try:
-            response = openai.ChatCompletion.create(
-                model="gpt-4o",
+            chat_completion = client.chat.completions.create(
                 messages=[
-                    {"role": "system", "content": "You are a professional trading analyst focusing on ETFs and leveraged ETFs."},
-                    {"role": "user", "content": prompt}
-                ]
+                    {
+                        "role": "system",
+                        "content": "You are a professional trading analyst focusing on ETFs and leveraged ETFs."
+                    },
+                    {
+                        "role": "user",
+                        "content": prompt
+                    }
+                ],
+                model="gpt-4o-mini",  # or whichever model you prefer
             )
-            return response.choices[0].message.content
+            return chat_completion.choices[0].message.content
         except Exception as e:
             return f"Error generating summary: {str(e)}"
 

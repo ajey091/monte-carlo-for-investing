@@ -33,50 +33,24 @@ Mitigation of leveraged ETF decay effects
 - Special risk management for leveraged instruments (2x and 3x ETFs)
 - Automated monitoring and signal generation
 
-
 ## Strategy Summary
 
 {{ site.data.signals.summary }}
 
-## Current Market Signals
+## Quick Navigation
 
-{% for symbol in site.data.parameters %}
-{% assign ticker = symbol[0] %}
-{% assign params = symbol[1] %}
-{% assign signal_data = site.data.signals.signals[ticker] %}
+### S&P 500 ETFs
+- [VOO - Vanguard S&P 500 ETF](./tickers/voo.html)
+- [SSO - ProShares Ultra S&P 500 (2x)](./tickers/sso.html)
+- [UPRO - ProShares UltraPro S&P 500 (3x)](./tickers/upro.html)
 
-### {{ ticker }} Analysis
+### NASDAQ ETFs
+- [QQQ - Invesco QQQ Trust](./tickers/qqq.html)
+- [QLD - ProShares Ultra QQQ (2x)](./tickers/qld.html)
+- [TQQQ - ProShares UltraPro QQQ (3x)](./tickers/tqqq.html)
 
-#### Charts
-![Price and Moving Averages](./assets/images/{{ ticker }}_price_ma.png)
-![RSI](./assets/images/{{ ticker }}_price_rsi.png)
-![Volatility](./assets/images/{{ ticker }}_price_vol.png)
-
-#### Current Status
-- **Signal**: {{ signal_data.signal }}
-- **Price**: ${{ signal_data.close_price }}
-- **RSI**: {{ signal_data.rsi | round: 2 }}
-- **Volatility**: {{ signal_data.volatility | round: 3 }}
-
-#### Technical Indicators
-- Short MA ({{ params.ma_short }} day): {{ signal_data.ma_short | round: 2 }}
-- Long MA ({{ params.ma_long }} day): {{ signal_data.ma_long | round: 2 }}
-- MA Cross Status: {{ signal_data.indicators.ma_cross }}
-- RSI Status: {{ signal_data.indicators.rsi_status }}
-- Volatility Status: {{ signal_data.indicators.volatility_status }}
-
-#### Strategy Parameters
-- RSI Period: {{ params.rsi_period }}
-- RSI Oversold: {{ params.rsi_oversold }}
-- RSI Overbought: {{ params.rsi_overbought }}
-- Volatility Window: {{ params.volatility_window }}
-- Volatility Threshold: {{ params.volatility_threshold | round: 3 }}
-
----
-
-{% endfor %}
-
-
+### Sector ETFs
+- [SOXL - Direxion Daily Semiconductor Bull 3X](./tickers/soxl.html)
 
 ## Market Overview
 
@@ -93,6 +67,7 @@ Mitigation of leveraged ETF decay effects
   {% endif %}
 {% endfor %}
 
+### Current Signal Distribution
 - Buy Signals: {{ buy_signals }}
 - Sell Signals: {{ sell_signals }}
 - Hold Signals: {{ hold_signals }}

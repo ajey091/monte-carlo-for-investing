@@ -39,17 +39,25 @@ jobs:
       
       - name: Push changes
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          
+        
+          # Fetch latest changes from remote
+          echo "Fetching latest changes from remote..."
+          git fetch origin main
+
+          # Show differences between local and remote
+          echo "Differences between local and remote:"
+          git diff HEAD..origin/main
+
           # Add and commit changes
           echo "Adding and committing changes..."
           git add daily_signals/* docs/_data/* docs/assets/images/*
           git status  # Let's see what's actually being committed
           git commit -m "Update trading signals" || echo "No changes to commit"
-          
-          # Push with force if needed, but with lease for safety
+
+          # Push changes
           echo "Pushing changes..."
           git push origin main

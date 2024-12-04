@@ -46,10 +46,10 @@ jobs:
           
           # Add and commit changes
           echo "Adding and committing changes..."
-          git add daily_signals/* docs/_data/*
+          git add daily_signals/* docs/_data/* docs/assets/images/*
           git status  # Let's see what's actually being committed
           git commit -m "Update trading signals" || echo "No changes to commit"
           
           # Push with force if needed, but with lease for safety
           echo "Pushing changes..."
-          git push --force-with-lease origin gh-pages-v2
+          git push origin main

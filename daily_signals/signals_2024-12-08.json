@@ -1,0 +1,111 @@
+{
+    "date": "2024-12-08",
+    "signals": {
+        "VOO": {
+            "date": "2024-12-06",
+            "signal": "HOLD",
+            "close_price": 558.8200073242188,
+            "ma_short": 539.2782982359541,
+            "ma_long": 536.4970456842791,
+            "rsi": 66.04247971091323,
+            "volatility": 0.007718418495101655,
+            "indicators": {
+                "ma_cross": "BULLISH",
+                "rsi_status": "NEUTRAL",
+                "volatility_status": "LOW"
+            },
+            "plots": null
+        },
+        "SSO": {
+            "date": "2024-12-06",
+            "signal": "HOLD",
+            "close_price": 99.7300033569336,
+            "ma_short": 93.54127648536195,
+            "ma_long": 92.71589178788035,
+            "rsi": 64.84486580090773,
+            "volatility": 0.015459376671444598,
+            "indicators": {
+                "ma_cross": "BULLISH",
+                "rsi_status": "NEUTRAL",
+                "volatility_status": "LOW"
+            },
+            "plots": null
+        },
+        "UPRO": {
+            "date": "2024-12-06",
+            "signal": "HOLD",
+            "close_price": 99.4800033569336,
+            "ma_short": 90.72297879482838,
+            "ma_long": 89.60122881437603,
+            "rsi": 64.53262160322025,
+            "volatility": 0.023240946133688368,
+            "indicators": {
+                "ma_cross": "BULLISH",
+                "rsi_status": "NEUTRAL",
+                "volatility_status": "LOW"
+            },
+            "plots": null
+        },
+        "QQQ": {
+            "date": "2024-12-06",
+            "signal": "HOLD",
+            "close_price": 526.47998046875,
+            "ma_short": 500.10106253116686,
+            "ma_long": 497.18882617615816,
+            "rsi": 63.75595410990537,
+            "volatility": 0.010770398081915888,
+            "indicators": {
+                "ma_cross": "BULLISH",
+                "rsi_status": "NEUTRAL",
+                "volatility_status": "LOW"
+            },
+            "plots": null
+        },
+        "QLD": {
+            "date": "2024-12-06",
+            "signal": "HOLD",
+            "close_price": 115.33000183105469,
+            "ma_short": 104.90638229694773,
+            "ma_long": 103.86209949694182,
+            "rsi": 62.91446653629294,
+            "volatility": 0.021569265905634287,
+            "indicators": {
+                "ma_cross": "BULLISH",
+                "rsi_status": "NEUTRAL",
+                "volatility_status": "LOW"
+            },
+            "plots": null
+        },
+        "TQQQ": {
+            "date": "2024-12-06",
+            "signal": "HOLD",
+            "close_price": 87.73999786376953,
+            "ma_short": 76.60382956646859,
+            "ma_long": 75.55422558700829,
+            "rsi": 62.596894009715356,
+            "volatility": 0.032249518358386485,
+            "indicators": {
+                "ma_cross": "BULLISH",
+                "rsi_status": "NEUTRAL",
+                "volatility_status": "LOW"
+            },
+            "plots": null
+        },
+        "SOXL": {
+            "date": "2024-12-06",
+            "signal": "SELL",
+            "close_price": 29.610000610351562,
+            "ma_short": 32.70212741608315,
+            "ma_long": 33.142516454060875,
+            "rsi": 43.04635993955992,
+            "volatility": 0.05611010995054141,
+            "indicators": {
+                "ma_cross": "BEARISH",
+                "rsi_status": "NEUTRAL",
+                "volatility_status": "LOW"
+            },
+            "plots": null
+        }
+    },
+    "summary": "### Market Sentiment Summary\n\nThe overall market sentiment, as indicated by the trading signals, shows a predominance of \"HOLD\" recommendations across most major ETFs, suggesting a stable, bullish environment for the underlying assets. Low volatility across the board indicates a subdued environment with no imminent major price swings. However, the exception is SOXL, which has received a \"SELL\" signal, indicating some weakness in the semiconductor sector.\n\n### Specific Recommendations for Each ETF\n\n1. **VOO (Vanguard S&P 500 ETF)**\n   - **Recommendation:** HOLD\n   - **Key Levels:** Watch for support around 539 (MA Short) and resistance at recent highs around 558.80.\n   - **Insight:** Strong bullish technical indicators suggest the potential for continued upward momentum.\n\n2. **SSO (ProShares Ultra S&P500)**\n   - **Recommendation:** HOLD\n   - **Key Levels:** Key support at 93.54 (MA Short) and resistance at approximately 100.\n   - **Insight:** Maintain positions as short and long MA remain bullish; consider opportunity for profit-taking if it approaches resistance levels.\n\n3. **UPRO (ProShares UltraPro S&P500)**\n   - **Recommendation:** HOLD\n   - **Key Levels:** Watch for support near 90.72 (MA Short) and resistance at 100.\n   - **Insight:** The overall bullish indicators suggest that the ETF may continue to perform well.\n\n4. **QQQ (Invesco QQQ Trust)**\n   - **Recommendation:** HOLD\n   - **Key Levels:** Key support around 500 (MA Short) and resistance at approximately 530.\n   - **Insight:** The continuation of buying strength can be anticipated but look for overbought conditions.\n\n5. **QLD (ProShares Ultra QQQ)**\n   - **Recommendation:** HOLD\n   - **Key Levels:** Monitor 104.91 (MA Short) for support and resistance around 120.\n   - **Insight:** As technology stocks contribute to growth, maintain current positions; expiration of earnings announcements might present volatility.\n\n6. **TQQQ (ProShares UltraPro QQQ)**\n   - **Recommendation:** HOLD\n   - **Key Levels:** Confirm support near 76.60 (MA Short) and resistance at 90.\n   - **Insight:** Broadly bullish indicators indicate a retention of positions.\n\n7. **SOXL (Direxion Daily Semiconductor Bull 3X Shares)**\n   - **Recommendation:** SELL\n   - **Key Levels:** Monitor for a change at 32.70 (MA Short) and resistance around 33.14 (MA Long).\n   - **Insight:** Bearish signal and RSI under 50 indicate weakness in semiconductors; consider reallocating investments.\n\n### Risk Warnings\n\n1. **Volatility:** Although overall volatility is low, SOXL shows significantly higher levels, indicating potential for greater price swings. This could lead to rapid changes in value, presenting risk for those holding positions.\n   \n2. **Sector-Specific Weakness:** SOXL\u2019s \u201cSELL\u201d signal indicates potential sector-specific issues in the semiconductor space, which may reflect broader economic concerns or sector-specific challenges.\n\n### Key Levels to Watch\n\n- **Support Levels:** \n  - VOO: 539\n  - SSO: 93.54\n  - UPRO: 90.72\n  - QQQ: 500\n  - QLD: 104.90\n  - TQQQ: 76.60\n  - SOXL: 29.00 (optionally, as sell signal indicates weakness)\n\n- **Resistance Levels:**\n  - VOO: 558.80\n  - SSO: 100\n  - UPRO: 100\n  - QQQ: 530\n  - QLD: 120\n  - TQQQ: 90\n  - SOXL: 33.14\n\nIn summary, maintaining current positions in most ETFs seems prudent while carefully considering the potential exit from SOXL. Investors should closely monitor market developments and be prepared to adjust positions accordingly based on changing indicators and resistance/support levels."
+}

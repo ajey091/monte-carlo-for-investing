@@ -8,7 +8,7 @@
             "ma_short": 508.6688979128574,
             "ma_long": 516.764962715015,
             "rsi": 50.460061034955544,
-            "volatility": 0.02682282334961234,
+            "volatility": 0.026822823349612328,
             "indicators": {
                 "ma_cross": "BEARISH",
                 "rsi_status": "NEUTRAL",
@@ -38,7 +38,7 @@
             "ma_short": 70.95797908052485,
             "ma_long": 75.2619912666187,
             "rsi": 47.64924629978433,
-            "volatility": 0.08067050348596187,
+            "volatility": 0.08067050348596186,
             "indicators": {
                 "ma_cross": "BEARISH",
                 "rsi_status": "NEUTRAL",
@@ -53,7 +53,7 @@
             "ma_short": 471.0280495501579,
             "ma_long": 481.33592732747394,
             "rsi": 51.61326113569675,
-            "volatility": 0.03274106848693885,
+            "volatility": 0.03274106848693886,
             "indicators": {
                 "ma_cross": "BEARISH",
                 "rsi_status": "NEUTRAL",
@@ -68,7 +68,7 @@
             "ma_short": 89.2740621363863,
             "ma_long": 93.82082982648883,
             "rsi": 50.00241555152665,
-            "volatility": 0.06438307509253476,
+            "volatility": 0.0643830750925348,
             "indicators": {
                 "ma_cross": "BEARISH",
                 "rsi_status": "NEUTRAL",
@@ -83,7 +83,7 @@
             "ma_short": 57.36556276361993,
             "ma_long": 62.3617336875514,
             "rsi": 48.54666055683309,
-            "volatility": 0.09663225395758632,
+            "volatility": 0.09663225395758628,
             "indicators": {
                 "ma_cross": "BEARISH",
                 "rsi_status": "NEUTRAL",
@@ -98,7 +98,7 @@
             "ma_short": 15.552819069395674,
             "ma_long": 17.822070339269807,
             "rsi": 40.7453420327319,
-            "volatility": 0.15100720142514942,
+            "volatility": 0.15100720142514953,
             "indicators": {
                 "ma_cross": "BEARISH",
                 "rsi_status": "NEUTRAL",

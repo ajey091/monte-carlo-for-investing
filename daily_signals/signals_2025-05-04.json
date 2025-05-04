@@ -1,0 +1,111 @@
+{
+    "date": "2025-05-04",
+    "signals": {
+        "VOO": {
+            "date": "2025-05-02",
+            "signal": "SELL",
+            "close_price": 520.7100219726562,
+            "ma_short": 508.6688979128574,
+            "ma_long": 516.764962715015,
+            "rsi": 50.460061034955544,
+            "volatility": 0.02682282334961234,
+            "indicators": {
+                "ma_cross": "BEARISH",
+                "rsi_status": "NEUTRAL",
+                "volatility_status": "LOW"
+            },
+            "plots": null
+        },
+        "SSO": {
+            "date": "2025-05-02",
+            "signal": "SELL",
+            "close_price": 82.8499984741211,
+            "ma_short": 80.77695286527593,
+            "ma_long": 83.72739062392921,
+            "rsi": 48.94004834253154,
+            "volatility": 0.05425981272644082,
+            "indicators": {
+                "ma_cross": "BEARISH",
+                "rsi_status": "NEUTRAL",
+                "volatility_status": "LOW"
+            },
+            "plots": null
+        },
+        "UPRO": {
+            "date": "2025-05-02",
+            "signal": "SELL",
+            "close_price": 71.91000366210938,
+            "ma_short": 70.95797908052485,
+            "ma_long": 75.2619912666187,
+            "rsi": 47.64924629978433,
+            "volatility": 0.08067050348596187,
+            "indicators": {
+                "ma_cross": "BEARISH",
+                "rsi_status": "NEUTRAL",
+                "volatility_status": "LOW"
+            },
+            "plots": null
+        },
+        "QQQ": {
+            "date": "2025-05-02",
+            "signal": "SELL",
+            "close_price": 488.8299865722656,
+            "ma_short": 471.0280495501579,
+            "ma_long": 481.33592732747394,
+            "rsi": 51.61326113569675,
+            "volatility": 0.03274106848693885,
+            "indicators": {
+                "ma_cross": "BEARISH",
+                "rsi_status": "NEUTRAL",
+                "volatility_status": "LOW"
+            },
+            "plots": null
+        },
+        "QLD": {
+            "date": "2025-05-02",
+            "signal": "SELL",
+            "close_price": 93.54000091552734,
+            "ma_short": 89.2740621363863,
+            "ma_long": 93.82082982648883,
+            "rsi": 50.00241555152665,
+            "volatility": 0.06438307509253476,
+            "indicators": {
+                "ma_cross": "BEARISH",
+                "rsi_status": "NEUTRAL",
+                "volatility_status": "LOW"
+            },
+            "plots": null
+        },
+        "TQQQ": {
+            "date": "2025-05-02",
+            "signal": "SELL",
+            "close_price": 59.43000030517578,
+            "ma_short": 57.36556276361993,
+            "ma_long": 62.3617336875514,
+            "rsi": 48.54666055683309,
+            "volatility": 0.09663225395758632,
+            "indicators": {
+                "ma_cross": "BEARISH",
+                "rsi_status": "NEUTRAL",
+                "volatility_status": "LOW"
+            },
+            "plots": null
+        },
+        "SOXL": {
+            "date": "2025-05-02",
+            "signal": "SELL",
+            "close_price": 13.289999961853027,
+            "ma_short": 15.552819069395674,
+            "ma_long": 17.822070339269807,
+            "rsi": 40.7453420327319,
+            "volatility": 0.15100720142514942,
+            "indicators": {
+                "ma_cross": "BEARISH",
+                "rsi_status": "NEUTRAL",
+                "volatility_status": "LOW"
+            },
+            "plots": null
+        }
+    },
+    "summary": "Error generating summary: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}"
+}

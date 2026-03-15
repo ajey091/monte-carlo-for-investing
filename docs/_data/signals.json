@@ -1,5 +1,5 @@
 {
-    "date": "2026-03-14",
+    "date": "2026-03-15",
     "signals": {
         "VOO": {
             "date": "2026-03-13",
@@ -8,7 +8,7 @@
             "ma_short": 631.3740455140459,
             "ma_long": 631.3087565104166,
             "rsi": 38.931092410189336,
-            "volatility": 0.008315849161957177,
+            "volatility": 0.008315849161957226,
             "indicators": {
                 "ma_cross": "BULLISH",
                 "rsi_status": "NEUTRAL",
@@ -23,7 +23,7 @@
             "ma_short": 58.2931914633893,
             "ma_long": 58.3607960081937,
             "rsi": 37.9617256965813,
-            "volatility": 0.01664022584875091,
+            "volatility": 0.01664022584875081,
             "indicators": {
                 "ma_cross": "BEARISH",
                 "rsi_status": "OVERSOLD",
@@ -38,7 +38,7 @@
             "ma_short": 116.43106371291141,
             "ma_long": 116.72044064705833,
             "rsi": 37.55248785480897,
-            "volatility": 0.02482872173855755,
+            "volatility": 0.024828721738557703,
             "indicators": {
                 "ma_cross": "BEARISH",
                 "rsi_status": "OVERSOLD",
@@ -53,7 +53,7 @@
             "ma_short": 613.2165942902261,
             "ma_long": 614.2508052357456,
             "rsi": 41.380367249694054,
-            "volatility": 0.011348902901153935,
+            "volatility": 0.01134890290115384,
             "indicators": {
                 "ma_cross": "BEARISH",
                 "rsi_status": "NEUTRAL",
@@ -68,7 +68,7 @@
             "ma_short": 69.62191528969623,
             "ma_long": 69.96371326111911,
             "rsi": 40.445428972391966,
-            "volatility": 0.022480165566438524,
+            "volatility": 0.02248016556643895,
             "indicators": {
                 "ma_cross": "BEARISH",
                 "rsi_status": "NEUTRAL",
@@ -83,7 +83,7 @@
             "ma_short": 51.5599999935069,
             "ma_long": 51.996061626233555,
             "rsi": 39.87453141931605,
-            "volatility": 0.03361833048709768,
+            "volatility": 0.03361833048709784,
             "indicators": {
                 "ma_cross": "BEARISH",
                 "rsi_status": "NEUTRAL",
@@ -98,7 +98,7 @@
             "ma_short": 60.10872317375021,
             "ma_long": 57.336666441800304,
             "rsi": 44.191415894392975,
-            "volatility": 0.07249442181815376,
+            "volatility": 0.07249442181815373,
             "indicators": {
                 "ma_cross": "BULLISH",
                 "rsi_status": "NEUTRAL",
@@ -107,5 +107,5 @@
             "plots": null
         }
     },
-    "summary": "### Current Market Analysis Summary\n\n1. **Overall Market Sentiment**:\n   The current market sentiment appears to be bearish, particularly for the leveraged ETFs indicated. Most of the ETFs show sell signals, with several of them experiencing oversold conditions. While the market is exhibiting low volatility, the bearish moving average crosses imply a general trend favoring downward momentum in the near term. The RSI levels are mostly below 50, indicating weak momentum.\n\n2. **Specific Recommendations**:\n   - **VOO (Vanguard S&P 500 ETF)**: **HOLD**\n     - Although the signal is a hold, caution is advised due to low RSI and the price being below both short and long-term moving averages. Monitor for signs of trend reversal.\n   \n   - **SSO (ProShares Ultra S&P 500)**: **SELL**\n     - With an oversold RSI and bearish indicators, consider exiting positions unless recovery signals emerge. Focus on reducing exposure.\n   \n   - **UPRO (ProShares UltraPro S&P 500)**: **SELL**\n     - Similar to SSO, with bearish trends and oversold conditions. Offload holdings if possible and avoid new purchases.\n   \n   - **QQQ (Invesco QQQ Trust)**: **SELL**\n     - As one of the largest tech-focused ETFs, its bearish signal and lower RSI suggest weakening in the tech sector. Consider selling your position.\n   \n   - **QLD (ProShares Ultra QQQ)**: **SELL**\n     - In line with the QQQ signal, it is advisable to sell due to bearish indicators. The leveraged nature of this ETF can amplify losses if the sector does not recover quickly.\n   \n   - **TQQQ (ProShares UltraPro QQQ)**: **SELL**\n     - Just like QLD, a sell is recommended. The risks associated with holding leveraged ETFs during bearish conditions can lead to significant drawdowns.\n   \n   - **SOXL (Direxion Daily Semiconductor Bull 3X Shares)**: **HOLD**\n     - This ETF is showing a bullish short-term crossover. While it\u2019s advised to hold currently, keep a close eye on semiconductor industry trends for any changes.\n\n3. **Risk Warnings**:\n   - **LEVERAGED ETFs**: Holding leveraged ETFs during a bearish trend is particularly risky, as these instruments can magnify losses significantly. Investors should approach with caution, especially when RSI levels are in the oversold territory.\n   - **Market Volatility**: Although the current volatility appears low, sharp market movements can occur, which would impact leveraged ETFs even more severely. Ensure stop-loss orders are in place.\n   - **Economic Indicators**: Following macroeconomic conditions and news that might affect market indices is crucial, as changes could quickly shift the current sentiments.\n\n4. **Key Levels to Watch**:\n   - For **VOO**: Watch for support around $600 and resistance near its short-term moving average of $631.\n   - For **SSO, UPRO, QQQ, QLD, TQQQ**: Key levels of resistance are the respective short-term moving averages, while pivotal support levels would depend predominantly on prior price action and could range around 5% lower than current prices.\n   - For **SOXL**: A strong breakout is needed above the moving average of $60 to confirm a bullish trend, while observing for significant support below $50.\n\nIn conclusion, the current market condition indicates a need for caution, and strategic actions should focus on risk management and protective positions, particularly regarding leveraged ETFs."
+    "summary": "### Current Market Analysis\n\n1. **Overall Market Sentiment**: \n   The market sentiment appears bearish overall, primarily indicated by the sell signals across multiple leveraged ETFs (SSO, UPRO, QQQ, QLD, TQQQ) and the divergence in momentum as reflected in their RSI values, which suggest that many of these funds are currently in oversold conditions. While the S&P 500 ETF (VOO) signals to hold, the bearish indicators across other major indices suggest potential market weakness ahead.\n\n2. **Specific Recommendations for Each ETF**:\n   - **VOO**: **Recommendation: Hold**\n     - The ETF shows a HOLD signal with a current price of $609.09. Indications of a bullish moving average cross may suggest potential stabilization, but the low RSI (38.93) indicates momentum is weak. Investors should watch for price action but refrain from making aggressive moves.\n   \n   - **SSO**: **Recommendation: Sell**\n     - The ETF's close price is $53.88, with a bearish moving average cross, and an RSI of 37.96 suggesting oversold conditions. Selling is advisable, as further corrections may occur.\n   \n   - **UPRO**: **Recommendation: Sell**\n     - Closing at $103.01, UPRO also indicates a sell signal with bearish indicators and an oversold RSI (37.55). Investors should consider exiting their positions to cut potential losses.\n   \n   - **QQQ**: **Recommendation: Sell**\n     - With a close of $593.72 and a bearish outlook, investors should sell to avoid further declines, especially as the asset is under significant pressure.\n   \n   - **QLD**: **Recommendation: Sell**\n     - QLD's close price is $64.76. With bearish signals and an RSI near oversold territory (40.45), selling is recommended to protect capital.\n   \n   - **TQQQ**: **Recommendation: Sell**\n     - Closing at $45.93, TQQQ exhibits bearish trends, and investors should look to sell given its poor performance.\n   \n   - **SOXL**: **Recommendation: Hold**\n     - The close price is $50.72, and while signals indicate a HOLD, the bullish moving average cross is noteworthy. Investors may consider waiting for further confirmation before making significant moves.\n\n3. **Risk Warnings**:\n   - The current oversold conditions in several leveraged ETFs (SSO, UPRO, QQQ, QLD, TQQQ) suggest that aggressive buying may lead to increased volatility, potentially resulting in rapid loss of capital. Keep in mind that leveraged ETFs are more sensitive to market fluctuations, amplifying both gains and losses.\n\n4. **Key Levels to Watch**:\n   - **VOO**: Watch the resistance near $631; failure to breach this level could indicate further downside.\n   - **SSO**: Key resistance at $58; any rise back to this level should be monitored closely.\n   - **UPRO**: Key resistance around $116; important to gauge momentum as this level approaches.\n   - **QQQ**: Watch carefully for resistance at $614; potential reversal point.\n   - **QLD**: Resistance at $69; track closely for signs of potential rebounds.\n   - **TQQQ**: Key level is $52; note how the ETF behaves when approaching this price point.\n   - **SOXL**: Look for resistance near $60; monitoring price reactions here will be crucial.\n\nOverall, the market appears to be under pressure, especially for leveraged ETFs, and cautious positioning is recommended. Investors should maintain vigilance regarding potential support and resistance levels as well as market developments."
 }

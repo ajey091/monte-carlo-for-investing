@@ -1,0 +1,111 @@
+{
+    "date": "2026-03-22",
+    "signals": {
+        "VOO": {
+            "date": "2026-03-20",
+            "signal": "SELL",
+            "close_price": 597.9400024414062,
+            "ma_short": 628.4604284408244,
+            "ma_long": 629.3322828861706,
+            "rsi": 34.07619064493821,
+            "volatility": 0.007846387687253861,
+            "indicators": {
+                "ma_cross": "BEARISH",
+                "rsi_status": "OVERSOLD",
+                "volatility_status": "LOW"
+            },
+            "plots": null
+        },
+        "SSO": {
+            "date": "2026-03-20",
+            "signal": "SELL",
+            "close_price": 51.86000061035156,
+            "ma_short": 57.68361688167491,
+            "ma_long": 57.923684103447094,
+            "rsi": 33.22384502484566,
+            "volatility": 0.015702157503444523,
+            "indicators": {
+                "ma_cross": "BEARISH",
+                "rsi_status": "OVERSOLD",
+                "volatility_status": "LOW"
+            },
+            "plots": null
+        },
+        "UPRO": {
+            "date": "2026-03-20",
+            "signal": "SELL",
+            "close_price": 97.08999633789062,
+            "ma_short": 114.53340376184342,
+            "ma_long": 115.34228047153405,
+            "rsi": 32.95616348916961,
+            "volatility": 0.023479150416595755,
+            "indicators": {
+                "ma_cross": "BEARISH",
+                "rsi_status": "OVERSOLD",
+                "volatility_status": "LOW"
+            },
+            "plots": null
+        },
+        "QQQ": {
+            "date": "2026-03-20",
+            "signal": "SELL",
+            "close_price": 582.0599975585938,
+            "ma_short": 610.0663828748337,
+            "ma_long": 611.9398236191064,
+            "rsi": 40.687236939964116,
+            "volatility": 0.010390911482167083,
+            "indicators": {
+                "ma_cross": "BEARISH",
+                "rsi_status": "NEUTRAL",
+                "volatility_status": "LOW"
+            },
+            "plots": null
+        },
+        "QLD": {
+            "date": "2026-03-20",
+            "signal": "SELL",
+            "close_price": 62.130001068115234,
+            "ma_short": 68.80148989088993,
+            "ma_long": 69.33614061589827,
+            "rsi": 39.82273781264169,
+            "volatility": 0.020602146701280365,
+            "indicators": {
+                "ma_cross": "BEARISH",
+                "rsi_status": "NEUTRAL",
+                "volatility_status": "LOW"
+            },
+            "plots": null
+        },
+        "TQQQ": {
+            "date": "2026-03-20",
+            "signal": "SELL",
+            "close_price": 43.08000183105469,
+            "ma_short": 50.59127669638776,
+            "ma_long": 51.24684203298468,
+            "rsi": 39.4670446052003,
+            "volatility": 0.03094379333343786,
+            "indicators": {
+                "ma_cross": "BEARISH",
+                "rsi_status": "NEUTRAL",
+                "volatility_status": "LOW"
+            },
+            "plots": null
+        },
+        "SOXL": {
+            "date": "2026-03-20",
+            "signal": "HOLD",
+            "close_price": 51.13999938964844,
+            "ma_short": 60.19595710267412,
+            "ma_long": 58.24105239332768,
+            "rsi": 43.45142554587936,
+            "volatility": 0.061862280961586504,
+            "indicators": {
+                "ma_cross": "BULLISH",
+                "rsi_status": "NEUTRAL",
+                "volatility_status": "LOW"
+            },
+            "plots": null
+        }
+    },
+    "summary": "### Current Market Situation Summary (as of March 20, 2026)\nThe overall market sentiment appears bearish based on the provided signals for ETFs (VOO, SSO, UPRO, QQQ, QLD, TQQQ), all of which have a \"SELL\" signal. This indicates a downward trend, characterized by oversold RSI values and bearish moving average (MA) crossovers. The sole exception is SOXL, which is recommended to \"HOLD,\" showing a bullish MA crossover, but is still operating in low volatility conditions.\n\n### 1. Overall Market Sentiment\n- **Bearish Sentiment**: All major ETFs analyzed indicate a bearish outlook, with significant oversold conditions across multiple indicators. This suggests that market participants should be cautious and may expect further declines.\n- **Low Volatility Environment**: Generally low volatility levels add to the uncertainty, implying that despite the bearish signals, sharp movements could occur.\n\n### 2. Specific Recommendations for Each ETF\n- **VOO (Vanguard S&P 500 ETF)**\n  - **Recommendation**: SELL\n  - **Insights**: Weakness in both short and long moving averages indicates continued price decline potential.\n\n- **SSO (ProShares Ultra S&P 500)**\n  - **Recommendation**: SELL\n  - **Insights**: Displays an even more severe oversold condition compared to VOO, exacerbating the bearish outlook.\n\n- **UPRO (ProShares UltraPro S&P 500)**\n  - **Recommendation**: SELL\n  - **Insights**: Consistent bearish indicators suggest significant downside risk as it struggles at lower price levels.\n\n- **QQQ (Invesco QQQ Trust)**\n  - **Recommendation**: SELL\n  - **Insights**: The tech-heavy index under pressure; sell signal aligns with weakening momentum.\n\n- **QLD (ProShares Ultra QQQ)**\n  - **Recommendation**: SELL\n  - **Insights**: Similar to QQQ, indicating further decline expected in this leveraged ETF focused on tech stocks.\n\n- **TQQQ (ProShares UltraPro QQQ)**\n  - **Recommendation**: SELL\n  - **Insights**: Despite the volatility in this leveraged ETF, it shows signals for a downturn in line with NASDAQ's performance.\n\n- **SOXL (Direxion Daily Semiconductor Bull 3X Shares)**\n  - **Recommendation**: HOLD\n  - **Insights**: Currently showing a bullish signal with potential for upward movement, in contrast to other ETFs. Monitor closely for new buy signals.\n\n### 3. Risk Warnings\n- **High Leverage Risk**: Leveraged ETFs such as SSO, UPRO, QLD, and TQQQ carry increased risk due to their use of leverage. They could amplify losses during market downturns.\n- **Market Volatility**: Given the low volatility status across the board, sudden price swings can still occur, presenting higher trading risks.\n- **Reversal Signals**: Should the RSI of any ETF begin to turn bullish or experience a positive trend in moving averages, caution is advised before transitioning to buy positions.\n\n### 4. Key Levels to Watch\n- **VOO**: Watch for support around $590; a breakdown below could indicate further weakness.\n- **SSO**: Key support at $50; maintain vigilance for a move below this level.\n- **UPRO**: Monitor $90 for possible support; below could trigger additional selling.\n- **QQQ**: $575 may provide initial support; a close below could accelerate declines.\n- **QLD**: Key level of $60; closing below this may trigger further selling pressure.\n- **TQQQ**: Around $40 serves as an important psychological level; weakness here could indicate more severe pullbacks.\n- **SOXL**: Key movement can be monitored at $50 for any bullish continuation.\n\n### Conclusion\nOverall, maintain cautious trading strategies and consider locking in profits where appropriate, given the prevailing bearish conditions. Monitoring key support levels will be crucial to determine market direction changes."
+}

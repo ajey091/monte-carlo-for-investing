@@ -1,0 +1,111 @@
+{
+    "date": "2026-04-12",
+    "signals": {
+        "VOO": {
+            "date": "2026-04-10",
+            "signal": "SELL",
+            "close_price": 624.5999755859375,
+            "ma_short": 617.5494917199967,
+            "ma_long": 620.2849206757127,
+            "rsi": 48.492510059572496,
+            "volatility": 0.01146173990370371,
+            "indicators": {
+                "ma_cross": "BEARISH",
+                "rsi_status": "NEUTRAL",
+                "volatility_status": "LOW"
+            },
+            "plots": null
+        },
+        "SSO": {
+            "date": "2026-04-10",
+            "signal": "SELL",
+            "close_price": 56.47999954223633,
+            "ma_short": 55.70940869919797,
+            "ma_long": 56.28842578017921,
+            "rsi": 47.31332939412482,
+            "volatility": 0.022990487763385147,
+            "indicators": {
+                "ma_cross": "BEARISH",
+                "rsi_status": "NEUTRAL",
+                "volatility_status": "LOW"
+            },
+            "plots": null
+        },
+        "UPRO": {
+            "date": "2026-04-10",
+            "signal": "SELL",
+            "close_price": 110.01000213623047,
+            "ma_short": 108.54487025484126,
+            "ma_long": 110.35810022186814,
+            "rsi": 46.625764114592094,
+            "volatility": 0.034487650209973714,
+            "indicators": {
+                "ma_cross": "BEARISH",
+                "rsi_status": "NEUTRAL",
+                "volatility_status": "LOW"
+            },
+            "plots": null
+        },
+        "QQQ": {
+            "date": "2026-04-10",
+            "signal": "SELL",
+            "close_price": 611.0700073242188,
+            "ma_short": 598.499094861619,
+            "ma_long": 602.7486925627056,
+            "rsi": 51.282740353176514,
+            "volatility": 0.01398783825575614,
+            "indicators": {
+                "ma_cross": "BEARISH",
+                "rsi_status": "NEUTRAL",
+                "volatility_status": "LOW"
+            },
+            "plots": null
+        },
+        "QLD": {
+            "date": "2026-04-10",
+            "signal": "SELL",
+            "close_price": 68.19000244140625,
+            "ma_short": 66.05366670324447,
+            "ma_long": 67.1270617434853,
+            "rsi": 50.2799025482352,
+            "volatility": 0.027829688319206614,
+            "indicators": {
+                "ma_cross": "BEARISH",
+                "rsi_status": "NEUTRAL",
+                "volatility_status": "LOW"
+            },
+            "plots": null
+        },
+        "TQQQ": {
+            "date": "2026-04-10",
+            "signal": "SELL",
+            "close_price": 49.16999816894531,
+            "ma_short": 47.331273180373174,
+            "ma_long": 48.582970669395046,
+            "rsi": 49.66738080499104,
+            "volatility": 0.04175036132290812,
+            "indicators": {
+                "ma_cross": "BEARISH",
+                "rsi_status": "NEUTRAL",
+                "volatility_status": "LOW"
+            },
+            "plots": null
+        },
+        "SOXL": {
+            "date": "2026-04-10",
+            "signal": "SELL",
+            "close_price": 76.38999938964844,
+            "ma_short": 58.305531684388505,
+            "ma_long": 59.30368389999657,
+            "rsi": 56.57843791917862,
+            "volatility": 0.08718119658289143,
+            "indicators": {
+                "ma_cross": "BEARISH",
+                "rsi_status": "NEUTRAL",
+                "volatility_status": "LOW"
+            },
+            "plots": null
+        }
+    },
+    "summary": "### Overall Market Sentiment:\nThe current market sentiment for the analyzed ETFs is bearish, as indicated by the repeated \"SELL\" signals across all included products. All ETFs exhibit a bearish moving average crossover, suggesting a decline in momentum, and readings of neutral RSI imply that there is no strong momentum to push prices in one direction. Additionally, low volatility across nearly all ETFs suggests a lack of strong price movement, contributing to a cautious outlook.\n\n### Specific Recommendations for Each ETF:\n\n1. **VOO (Vanguard S&P 500 ETF)**\n   - **Recommendation:** Sell\n   - **Key Levels:** Monitor the 617.55 (short MA) and 620.28 (long MA) levels for a potential rebound or further decline.\n\n2. **SSO (ProShares Ultra S&P 500)**\n   - **Recommendation:** Sell\n   - **Key Levels:** Watch for movements around 55.71 (short MA) and 56.29 (long MA) for signs of strength or weakness.\n\n3. **UPRO (ProShares UltraPro S&P 500)**\n   - **Recommendation:** Sell\n   - **Key Levels:** Keep an eye on the 108.54 (short MA) and 110.36 (long MA) levels for potential reversals.\n\n4. **QQQ (Invesco QQQ Trust)**\n   - **Recommendation:** Sell\n   - **Key Levels:** Key resistance levels are 598.50 (short MA) and 602.75 (long MA).\n\n5. **QLD (ProShares Ultra QQQ)**\n   - **Recommendation:** Sell\n   - **Key Levels:** Important levels to watch include 66.05 (short MA) and 67.13 (long MA).\n\n6. **TQQQ (ProShares UltraPro QQQ)**\n   - **Recommendation:** Sell\n   - **Key Levels:** Pay attention to the support at 47.33 (short MA) and resistance at 48.58 (long MA).\n\n7. **SOXL (Direxion Daily Semiconductor Bull 3X Shares)**\n   - **Recommendation:** Sell\n   - **Key Levels:** Key levels to observe are 58.31 (short MA) and 59.30 (long MA).\n\n### Risk Warnings:\n- **Volatility Exposure:** The ETFs, particularly leveraged ones like SSO, UPRO, TQQQ, and SOXL, have higher inherent risks due to their leverage. A sudden spike in volatility could lead to amplified losses.\n- **Market Correction:** A prolonged bearish trend may indicate broader market weakness, affecting leveraged ETFs disproportionately. Monitoring broader market trends is essential.\n- **Liquidity:** Ensure adequate liquidity for trades, especially if attempting to exit positions rapidly in a downturn, as this can exacerbate losses.\n\n### Key Levels to Watch:\n- **Short and Long MAs:** These are critical levels for each ETF, as breaking below short-term MAs may signal further declines. Conversely, holds above these levels could suggest potential for recovery.\n- **RSI Levels:** While currently neutral, downward movement in RSI may indicate increasing bearish momentum. An RSI below 40 could intensify bearish sentiment.\n- **Overall Market Indices:** Key levels in the S&P 500 and NASDAQ should be monitored, as significant movements could serve as leading indicators for these ETFs.\n\nIn summary, the market is currently bearish across the board with all analyzed ETFs suggesting sell signals. Traders should be cautious and watch for key moving average levels for potential entries or further declines."
+}

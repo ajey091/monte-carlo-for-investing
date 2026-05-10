@@ -1,0 +1,111 @@
+{
+    "date": "2026-05-10",
+    "signals": {
+        "VOO": {
+            "date": "2026-05-08",
+            "signal": "SELL",
+            "close_price": 678.0399780273438,
+            "ma_short": 628.617183604139,
+            "ma_long": 628.7578885262473,
+            "rsi": 86.04783762494642,
+            "volatility": 0.00834429916936991,
+            "indicators": {
+                "ma_cross": "BEARISH",
+                "rsi_status": "OVERBOUGHT",
+                "volatility_status": "LOW"
+            },
+            "plots": null
+        },
+        "SSO": {
+            "date": "2026-05-08",
+            "signal": "SELL",
+            "close_price": 66.22000122070312,
+            "ma_short": 57.40566131916452,
+            "ma_long": 57.50730541296173,
+            "rsi": 85.46758590103795,
+            "volatility": 0.01666287336037337,
+            "indicators": {
+                "ma_cross": "BEARISH",
+                "rsi_status": "OVERBOUGHT",
+                "volatility_status": "LOW"
+            },
+            "plots": null
+        },
+        "UPRO": {
+            "date": "2026-05-08",
+            "signal": "SELL",
+            "close_price": 139.22000122070312,
+            "ma_short": 113.14073911626288,
+            "ma_long": 113.53431514271519,
+            "rsi": 84.84289549982746,
+            "volatility": 0.024959954702081615,
+            "indicators": {
+                "ma_cross": "BEARISH",
+                "rsi_status": "OVERBOUGHT",
+                "volatility_status": "LOW"
+            },
+            "plots": null
+        },
+        "QQQ": {
+            "date": "2026-05-08",
+            "signal": "SELL",
+            "close_price": 711.22998046875,
+            "ma_short": 621.6748514378324,
+            "ma_long": 618.9702384011787,
+            "rsi": 88.86681640069567,
+            "volatility": 0.010767482099057743,
+            "indicators": {
+                "ma_cross": "BULLISH",
+                "rsi_status": "OVERBOUGHT",
+                "volatility_status": "LOW"
+            },
+            "plots": null
+        },
+        "QLD": {
+            "date": "2026-05-08",
+            "signal": "SELL",
+            "close_price": 91.72000122070312,
+            "ma_short": 70.93989262682327,
+            "ma_long": 70.41445447687516,
+            "rsi": 88.62124554459726,
+            "volatility": 0.021327837060395333,
+            "indicators": {
+                "ma_cross": "BULLISH",
+                "rsi_status": "OVERBOUGHT",
+                "volatility_status": "LOW"
+            },
+            "plots": null
+        },
+        "TQQQ": {
+            "date": "2026-05-08",
+            "signal": "SELL",
+            "close_price": 76.27999877929688,
+            "ma_short": 52.52558939507667,
+            "ma_long": 51.989907917223476,
+            "rsi": 88.51685049518979,
+            "volatility": 0.031849311161065,
+            "indicators": {
+                "ma_cross": "BULLISH",
+                "rsi_status": "OVERBOUGHT",
+                "volatility_status": "LOW"
+            },
+            "plots": null
+        },
+        "SOXL": {
+            "date": "2026-05-08",
+            "signal": "SELL",
+            "close_price": 176.94000244140625,
+            "ma_short": 81.38042579813207,
+            "ma_long": 78.49210545054653,
+            "rsi": 80.58958783041592,
+            "volatility": 0.07260759614532891,
+            "indicators": {
+                "ma_cross": "BULLISH",
+                "rsi_status": "OVERBOUGHT",
+                "volatility_status": "LOW"
+            },
+            "plots": null
+        }
+    },
+    "summary": "### Overall Market Sentiment\nThe current market sentiment is bearish, with all examined ETFs signaling a \"SELL.\" The RSI for each ETF is significantly overbought (all above 80), indicating that asset prices may have risen excessively and could be due for correction. The moving average (MA) crossovers are largely bearish, reinforcing the signal to sell. Low volatility levels suggest that while the market has been stable, a reversal may be imminent due to overbought conditions.\n\n### Specific Recommendations for Each ETF\n1. **VOO (Vanguard S&P 500 ETF)**  \n   - **Action:** SELL  \n   - **Rationale:** Overbought RSI (86.05) combined with bearish MA crossover indicates a likely price pullback. Consider reallocating into cash or derivative products to hedge.\n\n2. **SSO (ProShares Ultra S&P 500)**  \n   - **Action:** SELL  \n   - **Rationale:** Similar to VOO, the RSI (85.47) and MA cross signals suggest profit-taking is prudent. \n\n3. **UPRO (ProShares UltraPro S&P 500)**  \n   - **Action:** SELL  \n   - **Rationale:** Presenting high overbought levels (RSI of 84.84) and bearish MA crossover; necessary to liquidate positions before potential downturn.\n\n4. **QQQ (Invesco QQQ Trust)**  \n   - **Action:** SELL  \n   - **Rationale:** The RSI is extremely elevated (88.87), indicating high risk of a pullback, despite a bullish MA crossover. It\u2019s advisable to exit or reduce positions.\n\n5. **QLD (ProShares Ultra QQQ)**  \n   - **Action:** SELL  \n   - **Rationale:** Overbought condition (RSI of 88.62) is unsustainable. The bearish environment suggests selling and holding cash.\n\n6. **TQQQ (ProShares UltraPro QQQ)**  \n   - **Action:** SELL  \n   - **Rationale:** Similar indicators with RSI at 88.52 and MA crossover signal a corrective phase approaching. Liquidity in cash preferred.\n\n7. **SOXL (Direxion Daily Semiconductor Bull 3X Shares)**  \n   - **Action:** SELL  \n   - **Rationale:** Even with a bullish MA crossover, the high RSI (80.59) suggests possible price declines. Tread carefully and consider taking profits.\n\n### Risk Warnings\n- **Market Correction Risk:** Given the universally high RSI levels across these ETFs, a strong market correction could occur.\n- **Leverage Risk:** The leveraged ETFs (SSO, UPRO, QLD, TQQQ, SOXL) are particularly susceptible to rapid losses if the market reverses. Employing stop-loss orders might mitigate some risks.\n- **Liquidity Concerns:** In a sharp downturn, liquidity could dry up, making it difficult to exit positions at favorable prices.\n\n### Key Levels to Watch\n- **Support/Resistance Levels:** Monitor key technical levels for potential support\u2014these will vary based on historical price action, but a lookout for the last major lows can give clues as to where buyers might emerge.\n- **MA Levels:** With short-term MAs crossing below long-term MAs, pay attention to the price action around those crossover points as confirmation signals.\n- **Volatility Index (VIX):** An increase in the VIX might precede market declines. If the index rises sharply, reassess positions tactically.\n\n### Conclusion\nGiven the bearish signals across both standard and leveraged ETFs, it's advised to take necessary actions to reduce exposure in the current market climate to preserve capital or seek alternative investment opportunities."
+}

@@ -1,0 +1,111 @@
+{
+    "date": "2026-07-12",
+    "signals": {
+        "VOO": {
+            "date": "2026-07-10",
+            "signal": "HOLD",
+            "close_price": 693.8599853515625,
+            "ma_short": 681.4547872340426,
+            "ma_long": 676.4706624348959,
+            "rsi": 50.68173819203531,
+            "volatility": 0.009927720395192583,
+            "indicators": {
+                "ma_cross": "BULLISH",
+                "rsi_status": "NEUTRAL",
+                "volatility_status": "LOW"
+            },
+            "plots": null
+        },
+        "SSO": {
+            "date": "2026-07-10",
+            "signal": "HOLD",
+            "close_price": 68.72000122070312,
+            "ma_short": 66.79442515271775,
+            "ma_long": 65.92374038696289,
+            "rsi": 49.52693153587787,
+            "volatility": 0.019757959293711443,
+            "indicators": {
+                "ma_cross": "BULLISH",
+                "rsi_status": "NEUTRAL",
+                "volatility_status": "LOW"
+            },
+            "plots": null
+        },
+        "UPRO": {
+            "date": "2026-07-10",
+            "signal": "HOLD",
+            "close_price": 146.16000366210938,
+            "ma_short": 140.62879749054605,
+            "ma_long": 138.04467947441236,
+            "rsi": 49.0531041981658,
+            "volatility": 0.03017288714275209,
+            "indicators": {
+                "ma_cross": "BULLISH",
+                "rsi_status": "NEUTRAL",
+                "volatility_status": "LOW"
+            },
+            "plots": null
+        },
+        "QQQ": {
+            "date": "2026-07-10",
+            "signal": "HOLD",
+            "close_price": 725.510009765625,
+            "ma_short": 717.623771505153,
+            "ma_long": 707.1553794459293,
+            "rsi": 48.516916922227175,
+            "volatility": 0.019305366761753914,
+            "indicators": {
+                "ma_cross": "BULLISH",
+                "rsi_status": "NEUTRAL",
+                "volatility_status": "LOW"
+            },
+            "plots": null
+        },
+        "QLD": {
+            "date": "2026-07-10",
+            "signal": "HOLD",
+            "close_price": 93.69999694824219,
+            "ma_short": 92.8093881809965,
+            "ma_long": 90.37584271347313,
+            "rsi": 47.48758542935383,
+            "volatility": 0.038235645375885134,
+            "indicators": {
+                "ma_cross": "BULLISH",
+                "rsi_status": "NEUTRAL",
+                "volatility_status": "LOW"
+            },
+            "plots": null
+        },
+        "TQQQ": {
+            "date": "2026-07-10",
+            "signal": "HOLD",
+            "close_price": 77.02999877929688,
+            "ma_short": 76.93097638069315,
+            "ma_long": 74.13861525686164,
+            "rsi": 46.723002195239665,
+            "volatility": 0.05672470835478838,
+            "indicators": {
+                "ma_cross": "BULLISH",
+                "rsi_status": "NEUTRAL",
+                "volatility_status": "LOW"
+            },
+            "plots": null
+        },
+        "SOXL": {
+            "date": "2026-07-10",
+            "signal": "HOLD",
+            "close_price": 192.25999450683594,
+            "ma_short": 207.18659616023936,
+            "ma_long": 190.99701784368148,
+            "rsi": 47.882735415128884,
+            "volatility": 0.14149283279228692,
+            "indicators": {
+                "ma_cross": "BULLISH",
+                "rsi_status": "NEUTRAL",
+                "volatility_status": "LOW"
+            },
+            "plots": null
+        }
+    },
+    "summary": "### Overall Market Sentiment:\nThe current market sentiment appears to be cautiously optimistic but stable, as indicated by the \"HOLD\" signals across prominent ETFs, including VOO, SSO, UPRO, QQQ, QLD, TQQQ, and SOXL. All shorts and long moving averages show bullish signals, suggesting potential for upward movement. However, RSI readings are near neutral levels (around 50), indicating neither overbought nor oversold conditions. Additionally, volatility is categorized as low across all mentioned ETFs, further affirming a stable but uncertain market environment.\n\n### Specific Recommendations for Each ETF:\n- **VOO**: **HOLD**. The strong support of moving averages and stable close price signals continuity. Monitor for a breakout above the 695 level for potential initiation of a buying position.\n- **SSO**: **HOLD**. Maintain current holdings. Watch for any signals of increased momentum, and consider adding if the price surpasses 70.\n- **UPRO**: **HOLD**. With solid moving averages backing the price, remain invested. Look for breaks above 150 to instigate fresh buying.\n- **QQQ**: **HOLD**. Retain positions. A breakout past the 730 level could signify increased momentum.\n- **QLD**: **HOLD**. Keep current positions and seek upward momentum. An increase over 95 could be seen as an opportunity to add to positions.\n- **TQQQ**: **HOLD**. Good support seen in moving averages. Look for confirmation above 78 to build further positions.\n- **SOXL**: **HOLD**. Despite volatility, the overall bullish indicators suggest maintaining your current position with a watchful eye for a potential recovery above 200.\n\n### Risk Warnings:\n- The general market remains at neutral RSI levels, which may indicate potential reversals should any negative news or events arise. Extreme volatility could catch unprepared traders off-guard.\n- Low volatility levels suggest complacency; any unforeseen global economic events or significant shifts in interest rates could result in sharp market movements.\n- Leveraged ETFs like SSO, UPRO, TQQQ, and SOXL amplify gains but also amplify losses. Caution is advised while trading these instruments, particularly during uncertain market periods.\n\n### Key Levels to Watch:\n- **VOO**: Resistance around 695; support near 680.\n- **SSO**: Watch for resistance at 70 and support at 66.\n- **UPRO**: Key resistance at 150; support around 140.\n- **QQQ**: Resistance at 730; support close to 720.\n- **QLD**: Key levels are resistance at 95; support at 92.\n- **TQQQ**: Keep an eye on 78 as the breakout level; support around 76.\n- **SOXL**: Resistance to watch at 200; support below at 190.\n\nMonitoring these levels, along with developed trading strategies, can help optimize outcomes in the current environment."
+}

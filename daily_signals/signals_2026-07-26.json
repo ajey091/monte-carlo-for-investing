@@ -1,0 +1,111 @@
+{
+    "date": "2026-07-26",
+    "signals": {
+        "VOO": {
+            "date": "2026-07-24",
+            "signal": "HOLD",
+            "close_price": 679.1400146484375,
+            "ma_short": 684.0667919402426,
+            "ma_long": 682.2797369706003,
+            "rsi": 51.1383620481637,
+            "volatility": 0.008129767606116577,
+            "indicators": {
+                "ma_cross": "BULLISH",
+                "rsi_status": "NEUTRAL",
+                "volatility_status": "LOW"
+            },
+            "plots": null
+        },
+        "SSO": {
+            "date": "2026-07-24",
+            "signal": "HOLD",
+            "close_price": 65.66999816894531,
+            "ma_short": 67.10145625662297,
+            "ma_long": 66.85277155825966,
+            "rsi": 49.936776016754905,
+            "volatility": 0.0161074589692861,
+            "indicators": {
+                "ma_cross": "BULLISH",
+                "rsi_status": "NEUTRAL",
+                "volatility_status": "LOW"
+            },
+            "plots": null
+        },
+        "UPRO": {
+            "date": "2026-07-24",
+            "signal": "HOLD",
+            "close_price": 136.27000427246094,
+            "ma_short": 141.33298443733378,
+            "ma_long": 140.6863770066646,
+            "rsi": 49.54356011064785,
+            "volatility": 0.024725623117372898,
+            "indicators": {
+                "ma_cross": "BULLISH",
+                "rsi_status": "NEUTRAL",
+                "volatility_status": "LOW"
+            },
+            "plots": null
+        },
+        "QQQ": {
+            "date": "2026-07-24",
+            "signal": "HOLD",
+            "close_price": 684.22998046875,
+            "ma_short": 718.1413587204953,
+            "ma_long": 715.1811791135553,
+            "rsi": 44.446734379289225,
+            "volatility": 0.0166532406305278,
+            "indicators": {
+                "ma_cross": "BULLISH",
+                "rsi_status": "NEUTRAL",
+                "volatility_status": "LOW"
+            },
+            "plots": null
+        },
+        "QLD": {
+            "date": "2026-07-24",
+            "signal": "HOLD",
+            "close_price": NaN,
+            "ma_short": NaN,
+            "ma_long": NaN,
+            "rsi": 45.029295160193186,
+            "volatility": 0.03283453994227612,
+            "indicators": {
+                "ma_cross": "BEARISH",
+                "rsi_status": "NEUTRAL",
+                "volatility_status": "LOW"
+            },
+            "plots": null
+        },
+        "TQQQ": {
+            "date": "2026-07-24",
+            "signal": "HOLD",
+            "close_price": 64.0,
+            "ma_short": 76.22285461425781,
+            "ma_long": 75.71448931777687,
+            "rsi": 43.381498458487876,
+            "volatility": 0.0490323248828882,
+            "indicators": {
+                "ma_cross": "BULLISH",
+                "rsi_status": "NEUTRAL",
+                "volatility_status": "LOW"
+            },
+            "plots": null
+        },
+        "SOXL": {
+            "date": "2026-07-24",
+            "signal": "HOLD",
+            "close_price": NaN,
+            "ma_short": NaN,
+            "ma_long": NaN,
+            "rsi": 44.59685572540436,
+            "volatility": 0.11985249107148475,
+            "indicators": {
+                "ma_cross": "BEARISH",
+                "rsi_status": "NEUTRAL",
+                "volatility_status": "LOW"
+            },
+            "plots": null
+        }
+    },
+    "summary": "### Overall Market Sentiment\nThe market currently shows a **neutral to slightly bullish** sentiment across the analyzed ETFs. All securities are indicating a \"HOLD\" recommendation, suggesting stability rather than significant upward or downward momentum. Despite the positive short-term moving average cross signals, various ETFs exhibit relatively low RSI values, indicating that market participants may lack strong conviction. Volatility remains low across the board, suggesting a subdued trading environment.\n\n### Specific Recommendations for Each ETF\n\n1. **VOO (Vanguard S&P 500 ETF)**\n   - **Recommendation**: **Hold**\n   - **Insight**: Both moving averages are indicating a bullish cross, but closing prices below the moving averages suggest a potential pullback. Monitor for bullish momentum if it surpasses the resistance zone near $684.\n\n2. **SSO (ProShares Ultra S&P500)**\n   - **Recommendation**: **Hold**\n   - **Insight**: Similar to VOO, SSO has a bullish moving average crossover but is trading below both moving averages. Watch for upward movement towards the significant level of $67. Consider accumulating on dips near $65 if the market sentiment improves.\n\n3. **UPRO (ProShares UltraPro S&P500)**\n   - **Recommendation**: **Hold**\n   - **Insight**: Despite a bullish MA cross, UPRO is also under pressure, trading significantly below the short and long MA. Monitor for buying opportunities if prices push above the upper resistance at $141.\n\n4. **QQQ (Invesco QQQ Trust)**\n   - **Recommendation**: **Hold**\n   - **Insight**: QQQ has stronger resistance at $718. Despite the bullish cross, it remains significantly below both moving averages. Consider holding while waiting for a clear breakout above this key level.\n\n5. **QLD (ProShares Ultra QQQ)**\n   - **Recommendation**: **Hold**\n   - **Insight**: QLD has a bearish moving average cross and is showing potentially declining momentum. While trading signals are neutral, assess market conditions closely before reopening positions.\n\n6. **TQQQ (ProShares UltraPro QQQ)**\n   - **Recommendation**: **Hold**\n   - **Insight**: Though showing a bullish crossover, TQQQ is trading poorly relative to its moving averages. A watchful approach is warranted, focusing on resistance near $76 for signs of momentum.\n\n7. **SOXL (Direxion Daily Semiconductor Bull 3X Shares)**\n   - **Recommendation**: **Hold**\n   - **Insight**: This ETF is indicating a bearish cross with higher volatility, implying extreme caution. Resistance to monitor is unclear due to NaN price indications; however, watch for patterns if prices stabilize.\n\n### Risk Warnings if Applicable\n- **Market Volatility**: The low but present volatility across these ETFs suggests that sudden shifts in price can occur without much notice. Investors should be prepared for potential increases in market turbulence.\n- **Bearish Indicators**: QLD and SOXL show bearish signals that may lead to declines if market conditions worsen. Exercise caution, especially with leveraged ETFs, due to their amplifying effect on losses.\n- **Lower RSI Levels**: Multiple ETFs show that the RSI is close to the oversold territory, which may indicate a likelihood of potential downward pressure.\n\n### Key Levels to Watch\n- **Resistance Levels**:\n  - **VOO**: $684\n  - **SSO**: $67\n  - **UPRO**: $141\n  - **QQQ**: $718\n  - **TQQQ**: $76\n- **Bearish Signal Alerts**: Closing prices should be observed closely; any sustained drop below the immediate support levels will augment bearish tendencies for those respective ETFs.\n\nIn conclusion, a \"HOLD\" stance is justified across the board. Investors should remain vigilant for potential bullish breakouts and bearish reversals based on market momentum and the overall economic backdrop."
+}
